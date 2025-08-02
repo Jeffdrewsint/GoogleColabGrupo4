@@ -57,6 +57,11 @@ El modelo logra un alto nivel de exactitud general y un buen desempeño en la de
 - El recall puede mejorarse aplicando técnicas como *oversampling* (SMOTE), *undersampling* o modelos más complejos (árboles de decisión, XGBoost, redes neuronales).
 - Las visualizaciones y análisis estadísticos ayudan a entender el comportamiento de las transacciones y a guiar la selección de variables.
 
+
+**Analisis**
+- Los fraudes no necesariamente tienen montos altos, la mayoria son menores a 5k. Muchos tienen montos bajos, lo que dificulta su detección por simple umbral.
+
+
 ---
 
 **Herramientas Utilizadas**
