@@ -1,6 +1,5 @@
 # GoogleColabGrupo4
 Tratamiento de Datos Google Colab/ Python
-
 # Detección de Fraude en Tarjetas de Crédito
 
 ## Introducción
@@ -31,36 +30,38 @@ El dataset presenta un fuerte desbalance, con solo el 0.17% de las transacciones
 Para evaluar la capacidad predictiva de las variables, se construyó un modelo de **Regresión Logística** usando scikit-learn, con las siguientes características:
 
 - Se tomó una muestra estratificada para entrenamiento y prueba (70%-30%).
-- Se aplicó escalamiento de la variable Amount y normalización de otras variables.
+- Se aplicó escalamiento de la variable `Amount` y `Time` (las demás variables ya estaban PCA-transformadas).
 - Se usaron métricas adaptadas para desbalance: matriz de confusión, recall, precisión, F1-score y ROC-AUC.
 
 ### Resultados
 
-| Métrica           | Valor   |
-|-------------------|---------|
-| Accuracy          | XX.XX%  |
-| Precision (fraude) | XX.XX%  |
-| Recall (fraude)    | XX.XX%  |
-| F1-score (fraude)  | XX.XX%  |
-| ROC-AUC           | XX.XX%  |
+| Métrica             | Valor   |
+|---------------------|---------|
+| Accuracy            | 99.92%  |
+| Precision (fraude)  | 86.00%  |
+| Recall (fraude)     | 61.00%  |
+| F1-score (fraude)   | 72.00%  |
+| ROC-AUC             | 95.60%  |
+
+**Matriz de Confusión:**
 
 *Interpretación:*  
-El modelo logra identificar correctamente un porcentaje importante de fraudes (recall alto), aunque con algunos falsos positivos, lo que es crucial para minimizar pérdidas económicas.
+El modelo logra un alto nivel de exactitud general y un buen desempeño en la detección de fraudes, con una precisión del 86% y un recall del 61% para la clase fraude. Esto significa que identifica correctamente la mayoría de fraudes, aunque todavía deja escapar algunos (falsos negativos). El valor de ROC-AUC de 0.956 indica un buen poder discriminativo.
 
 ---
 
 ## Conclusiones
 
-- El dataset tiene características que permiten diferenciar transacciones fraudulentas, pero su fuerte desbalance requiere técnicas específicas.
-- La Regresión Logística, aunque simple, es un buen punto de partida para la detección de fraude.
-- Visualizaciones y análisis estadísticos apoyan la selección de variables y comprensión del fenómeno.
-- Futuras mejoras podrían incluir modelos más complejos, técnicas de balanceo y validación cruzada.
+- El dataset presenta un fuerte desbalance que impacta el recall para fraudes.
+- La Regresión Logística es capaz de obtener resultados sólidos, con buena precisión y un ROC-AUC alto.
+- El recall puede mejorarse aplicando técnicas como *oversampling* (SMOTE), *undersampling* o modelos más complejos (árboles de decisión, XGBoost, redes neuronales).
+- Las visualizaciones y análisis estadísticos ayudan a entender el comportamiento de las transacciones y a guiar la selección de variables.
 
 ---
 
 ## Referencias
 
-- Dataset: https://www.kaggle.com/mlg-ulb/creditcardfraud
+- Dataset: [Credit Card Fraud Detection - Kaggle](https://www.kaggle.com/mlg-ulb/creditcardfraud)  
 - Documentación scikit-learn: https://scikit-learn.org
 
 ---
