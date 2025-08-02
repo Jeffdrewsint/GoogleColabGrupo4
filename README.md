@@ -59,17 +59,17 @@ El modelo logra un alto nivel de exactitud general y un buen desempeño en la de
 
 ---
 
-**Analisis**
--Los fraudes no necesariamente tienen montos altos, la mayoria son menores a 5k. Muchos tienen montos bajos, lo que dificulta su detección por simple umbral.
--Algunas variables (V17, V14, V12, V10) tienen correlación moderada con la variable Class. Pueden ser útiles como indicadores para detección de fraude.
--Estas variables, (V17, V14, V12, V10) presentan valores atípicos marcados en las transacciones fraudulentas. Son candidatas clave para entrenamiento de modelos
+## Analisis
+- Los fraudes no necesariamente tienen montos altos, la mayoria son menores a 5k. Muchos tienen montos bajos, lo que dificulta su detección por simple umbral.
+- Algunas variables (V17, V14, V12, V10) tienen correlación moderada con la variable Class. Pueden ser útiles como indicadores para detección de fraude.
+- Estas variables, (V17, V14, V12, V10) presentan valores atípicos marcados en las transacciones fraudulentas. Son candidatas clave para entrenamiento de modelos
 
 ---
 
-**Herramientas Utilizadas**
--Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Plotly)
--Jupyter Notebook / Google Colab
--GitHub para control de versiones
+## Herramientas Utilizadas
+- Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Plotly)
+- Jupyter Notebook / Google Colab
+- GitHub para control de versiones
 
 
 ---
