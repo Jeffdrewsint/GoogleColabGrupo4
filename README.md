@@ -59,6 +59,13 @@ El modelo logra un alto nivel de exactitud general y un buen desempeño en la de
 
 ---
 
+**Herramientas Utilizadas**
+-Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Plotly)
+-Jupyter Notebook / Google Colab
+-GitHub para control de versiones
+
+
+--
 ## Referencias
 
 - Dataset: [Credit Card Fraud Detection - Kaggle](https://www.kaggle.com/mlg-ulb/creditcardfraud)  
