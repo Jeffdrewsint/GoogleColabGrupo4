@@ -57,10 +57,12 @@ El modelo logra un alto nivel de exactitud general y un buen desempeño en la de
 - El recall puede mejorarse aplicando técnicas como *oversampling* (SMOTE), *undersampling* o modelos más complejos (árboles de decisión, XGBoost, redes neuronales).
 - Las visualizaciones y análisis estadísticos ayudan a entender el comportamiento de las transacciones y a guiar la selección de variables.
 
+---
 
 **Analisis**
-- Los fraudes no necesariamente tienen montos altos, la mayoria son menores a 5k. Muchos tienen montos bajos, lo que dificulta su detección por simple umbral.
-
+-Los fraudes no necesariamente tienen montos altos, la mayoria son menores a 5k. Muchos tienen montos bajos, lo que dificulta su detección por simple umbral.
+-Algunas variables (V17, V14, V12, V10) tienen correlación moderada con la variable Class. Pueden ser útiles como indicadores para detección de fraude.
+-Estas variables, (V17, V14, V12, V10) presentan valores atípicos marcados en las transacciones fraudulentas. Son candidatas clave para entrenamiento de modelos
 
 ---
 
@@ -70,7 +72,7 @@ El modelo logra un alto nivel de exactitud general y un buen desempeño en la de
 -GitHub para control de versiones
 
 
---
+---
 ## Referencias
 
 - Dataset: [Credit Card Fraud Detection - Kaggle](https://www.kaggle.com/mlg-ulb/creditcardfraud)  
